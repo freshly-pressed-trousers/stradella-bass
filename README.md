@@ -35,7 +35,7 @@ The api connecting these modules to make it all work together is:
 
 The minimal styling is done via CSS modules `COMPONENTNAME.module.css`, which tends to be my flavour of choice for CSS componentisation as it produces tightly scoped CSS styles, albeit with the trade off of not being very DRY - but personally I prefer reusability at the component level rather than style level :)
 
-Components, state management are done in a functional pure-function style where possible, however the soundEngine is modelled using stateful objects as a wrapper around the stateful OOP design of the web audio API. See SignalPath.js, and Envelope.js; I've found this models the graph-node nature of audio processing quite well.
+Components and state management is done in a functional pure-function style where possible, however the soundEngine is modelled using stateful objects as a wrapper around the stateful OOP design of the web audio API. See SignalPath.js, and Envelope.js; I've found this models the graph-node nature of audio processing quite well.
 
 ## Tests
 
