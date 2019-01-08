@@ -1,4 +1,4 @@
-import { NOTE_ON, NOTE_OFF } from "store/actionTypes/note";
+import { NOTE_ON, NOTE_OFF } from "store/actionTypes/notes";
 
 export function triggerNote(midiNote) {
 	return {

@@ -1,10 +1,10 @@
-import { NOTE_ON, NOTE_OFF } from "store/actionTypes/note";
-import reducer from "../";
+import { NOTE_ON, NOTE_OFF } from "store/actionTypes/notes";
+import reducer from "../notes";
 
 describe("notes reducer", () => {
 	it("has initial state", () => {
 		const state = reducer(undefined, {});
-		expect(state).toEqual({ notes: [] });
+		expect(state).toEqual([]);
 	});
 
 	describe("note on", () => {
@@ -16,11 +16,9 @@ describe("notes reducer", () => {
 					midiNote,
 				},
 			};
-			const state = {
-				notes: [],
-			};
+			const state = [];
 			const newState = reducer(state, action);
-			expect(newState.notes[midiNote]).toBeTruthy();
+			expect(newState[midiNote]).toBeTruthy();
 		});
 		it("updates notes part of state given NOTE_ON action retaining notes", () => {
 			const midiNote = 2;
@@ -30,13 +28,11 @@ describe("notes reducer", () => {
 					midiNote,
 				},
 			};
-			const state = {
-				notes: [true, false],
-			};
+			const state = [true, false];
 			const newState = reducer(state, action);
-			expect(newState.notes[midiNote]).toBeTruthy();
-			expect(newState.notes[0]).toBeTruthy();
-			expect(newState.notes[1]).toBeFalsy();
+			expect(newState[midiNote]).toBeTruthy();
+			expect(newState[0]).toBeTruthy();
+			expect(newState[1]).toBeFalsy();
 		});
 	});
 	describe("note off", () => {
@@ -48,11 +44,9 @@ describe("notes reducer", () => {
 					midiNote,
 				},
 			};
-			const state = {
-				notes: [true, true, true],
-			};
+			const state = [true, true, true];
 			const newState = reducer(state, action);
-			expect(newState.notes[midiNote]).toBeFalsy();
+			expect(newState[midiNote]).toBeFalsy();
 		});
 		it("updates notes part of state given NOTE_OFF action retaining existing note boolean states", () => {
 			const midiNote = 0;
@@ -62,12 +56,10 @@ describe("notes reducer", () => {
 					midiNote,
 				},
 			};
-			const state = {
-				notes: [true, true],
-			};
+			const state = [true, true];
 			const newState = reducer(state, action);
-			expect(newState.notes[0]).toBeFalsy();
-			expect(newState.notes[1]).toBeTruthy();
+			expect(newState[0]).toBeFalsy();
+			expect(newState[1]).toBeTruthy();
 		});
 	});
 });

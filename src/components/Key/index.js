@@ -1,6 +1,6 @@
 import KeyComponent from "./KeyComponent";
-import NoteContainer from "containers/Note";
+import NotesContainer from "containers/Notes";
 
-const ConnectedKeyComponent = NoteContainer(KeyComponent);
+const ConnectedKeyComponent = NotesContainer(KeyComponent);
 
 export default ConnectedKeyComponent;

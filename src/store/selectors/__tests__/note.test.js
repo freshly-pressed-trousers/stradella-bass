@@ -1,4 +1,4 @@
-import { isNoteOn } from "../note";
+import { isNoteOn } from "../notes";
 
 describe("note", () => {
 	[

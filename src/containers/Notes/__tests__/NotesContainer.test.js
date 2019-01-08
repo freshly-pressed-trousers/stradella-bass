@@ -1,15 +1,15 @@
 import React from "react";
 import { Provider } from "react-redux";
-import NoteContainer from "../NoteContainer";
+import NotesContainer from "../NotesContainer";
 import { mount } from "enzyme";
 
-import { isNoteOn } from "store/selectors/note";
-import { triggerNote, releaseNote } from "store/actionCreators/note";
+import { isNoteOn } from "store/selectors/notes";
+import { triggerNote, releaseNote } from "store/actionCreators/notes";
 
-jest.mock("store/selectors/note");
-jest.mock("store/actionCreators/note");
+jest.mock("store/selectors/notes");
+jest.mock("store/actionCreators/notes");
 
-describe("NoteContainer component", () => {
+describe("NotesContainer component", () => {
 	function TestComponent() {
 		return <div />;
 	}
@@ -23,9 +23,9 @@ describe("NoteContainer component", () => {
 	}
 
 	beforeEach(() => isNoteOn.mockReset());
-	describe("triggerNote", () => {
+	describe("triggerNotes", () => {
 		it("generates a triggerNote function and populates the props of the component", () => {
-			const ConfiguredComponent = NoteContainer(TestComponent);
+			const ConfiguredComponent = NotesContainer(TestComponent);
 			const mockStore = generateMockStore({});
 
 			const component = mount(
@@ -39,7 +39,7 @@ describe("NoteContainer component", () => {
 		});
 
 		it("triggerNote calls dispatch of result of triggerNote action creator when invoked", () => {
-			const ConfiguredComponent = NoteContainer(TestComponent);
+			const ConfiguredComponent = NotesContainer(TestComponent);
 			const mockStore = generateMockStore({});
 			const stubbedActionCreatorResponse = {
 				payload: "stuff",
@@ -64,7 +64,7 @@ describe("NoteContainer component", () => {
 
 	describe("releaseNote", () => {
 		it("generates a releaseNote function and populates the props of the component", () => {
-			const ConfiguredComponent = NoteContainer(TestComponent);
+			const ConfiguredComponent = NotesContainer(TestComponent);
 			const mockStore = generateMockStore({});
 
 			const component = mount(
@@ -77,7 +77,7 @@ describe("NoteContainer component", () => {
 			expect(props.releaseNote).toBeDefined();
 		});
 		it("releaseNote calls dispatch of result of releaseNote action creator when invoked", () => {
-			const ConfiguredComponent = NoteContainer(TestComponent);
+			const ConfiguredComponent = NotesContainer(TestComponent);
 			const mockStore = generateMockStore({});
 			const stubbedActionCreatorResponse = {
 				payload: "stuff",
@@ -103,7 +103,7 @@ describe("NoteContainer component", () => {
 	describe("isOn", () => {
 		describe("single notes", () => {
 			it("populates props with result of isOn selector true case", () => {
-				const ConfiguredComponent = NoteContainer(TestComponent);
+				const ConfiguredComponent = NotesContainer(TestComponent);
 				const mockState = { notes: 1234 };
 				const mockStore = generateMockStore(mockState);
 				isNoteOn.mockReturnValue(true);
@@ -120,7 +120,7 @@ describe("NoteContainer component", () => {
 			});
 
 			it("populates props with result of isOn selector false case", () => {
-				const ConfiguredComponent = NoteContainer(TestComponent);
+				const ConfiguredComponent = NotesContainer(TestComponent);
 				const mockState = { notes: 1234 };
 				const mockStore = generateMockStore(mockState);
 				isNoteOn.mockReturnValue(false);
@@ -138,7 +138,7 @@ describe("NoteContainer component", () => {
 		});
 		describe("chords", () => {
 			it("populates props with aggregate result of isOn selector true case", () => {
-				const ConfiguredComponent = NoteContainer(TestComponent);
+				const ConfiguredComponent = NotesContainer(TestComponent);
 				const mockState = { notes: 1234 };
 				const mockStore = generateMockStore(mockState);
 				isNoteOn.mockReturnValue(true);
@@ -158,7 +158,7 @@ describe("NoteContainer component", () => {
 			});
 
 			it("populates props with aggregate result of isOn selector false case no notes triggered", () => {
-				const ConfiguredComponent = NoteContainer(TestComponent);
+				const ConfiguredComponent = NotesContainer(TestComponent);
 				const mockState = { notes: 1234 };
 				const mockStore = generateMockStore(mockState);
 				isNoteOn.mockReturnValue(false);
@@ -174,7 +174,7 @@ describe("NoteContainer component", () => {
 			});
 
 			it("populates props with aggregate result of isOn selector false case two of three notes triggered", () => {
-				const ConfiguredComponent = NoteContainer(TestComponent);
+				const ConfiguredComponent = NotesContainer(TestComponent);
 				const mockState = { notes: 1234 };
 				const mockStore = generateMockStore(mockState);
 				isNoteOn

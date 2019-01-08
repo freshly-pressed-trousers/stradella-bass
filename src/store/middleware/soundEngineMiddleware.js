@@ -1,6 +1,6 @@
 import { trigger, release } from "soundEngine";
 
-import { NOTE_ON, NOTE_OFF } from "store/actionTypes/note";
+import { NOTE_ON, NOTE_OFF } from "store/actionTypes/notes";
 
 export default store => next => action => {
 	next(action);

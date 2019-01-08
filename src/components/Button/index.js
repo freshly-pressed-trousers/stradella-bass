@@ -1,6 +1,6 @@
 import ButtonComponent from "./ButtonComponent";
-import NoteContainer from "containers/Note";
+import NotesContainer from "containers/Notes";
 
-const ConnectedButtonComponent = NoteContainer(ButtonComponent);
+const ConnectedButtonComponent = NotesContainer(ButtonComponent);
 
 export default ConnectedButtonComponent;

@@ -1,7 +1,7 @@
-import { NOTE_ON, NOTE_OFF } from "store/actionTypes/note";
-import { triggerNote, releaseNote } from "../note";
+import { NOTE_ON, NOTE_OFF } from "store/actionTypes/notes";
+import { triggerNote, releaseNote } from "../notes";
 
-describe("note", () => {
+describe("notes", () => {
 	it("triggerNote invocation creates action", () => {
 		expect(triggerNote(24)).toEqual({
 			type: NOTE_ON,

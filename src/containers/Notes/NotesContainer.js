@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import { isNoteOn } from "store/selectors/note";
-import { triggerNote, releaseNote } from "store/actionCreators/note";
+import { isNoteOn } from "store/selectors/notes";
+import { triggerNote, releaseNote } from "store/actionCreators/notes";
 
 function mapStateToProps(state, ownProps) {
 	const { midiNote, midiNotes } = ownProps;
