@@ -1,0 +1,416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BassComponent component matches snapshot 1`] = `
+<div
+  className="wrapper"
+>
+  <ButtonRowComponent
+    label="Counter Bass"
+  >
+    <Connect(ButtonComponent)
+      key="55"
+      midiNote={55}
+    />
+    <Connect(ButtonComponent)
+      key="50"
+      midiNote={50}
+    />
+    <Connect(ButtonComponent)
+      key="57"
+      midiNote={57}
+    />
+    <Connect(ButtonComponent)
+      key="52"
+      midiNote={52}
+    />
+    <Connect(ButtonComponent)
+      key="59"
+      midiNote={59}
+    />
+    <Connect(ButtonComponent)
+      key="54"
+      midiNote={54}
+    />
+    <Connect(ButtonComponent)
+      key="61"
+      midiNote={61}
+    />
+    <Connect(ButtonComponent)
+      key="56"
+      midiNote={56}
+    />
+  </ButtonRowComponent>
+  <ButtonRowComponent
+    label="Bass"
+  >
+    <Connect(ButtonComponent)
+      key="51"
+      midiNote={51}
+    />
+    <Connect(ButtonComponent)
+      key="46"
+      midiNote={46}
+    />
+    <Connect(ButtonComponent)
+      key="53"
+      midiNote={53}
+    />
+    <Connect(ButtonComponent)
+      key="48"
+      midiNote={48}
+    />
+    <Connect(ButtonComponent)
+      key="55"
+      midiNote={55}
+    />
+    <Connect(ButtonComponent)
+      key="50"
+      midiNote={50}
+    />
+    <Connect(ButtonComponent)
+      key="57"
+      midiNote={57}
+    />
+    <Connect(ButtonComponent)
+      key="52"
+      midiNote={52}
+    />
+  </ButtonRowComponent>
+  <ButtonRowComponent
+    label="Major"
+  >
+    <Connect(ButtonComponent)
+      key="0"
+      midiNotes={
+        Array [
+          63,
+          67,
+          70,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="1"
+      midiNotes={
+        Array [
+          58,
+          62,
+          65,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="2"
+      midiNotes={
+        Array [
+          65,
+          69,
+          72,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="3"
+      midiNotes={
+        Array [
+          60,
+          64,
+          67,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="4"
+      midiNotes={
+        Array [
+          67,
+          71,
+          74,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="5"
+      midiNotes={
+        Array [
+          62,
+          66,
+          69,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="6"
+      midiNotes={
+        Array [
+          69,
+          73,
+          76,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="7"
+      midiNotes={
+        Array [
+          64,
+          68,
+          71,
+        ]
+      }
+    />
+  </ButtonRowComponent>
+  <ButtonRowComponent
+    label="Minor"
+  >
+    <Connect(ButtonComponent)
+      key="0"
+      midiNotes={
+        Array [
+          63,
+          66,
+          70,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="1"
+      midiNotes={
+        Array [
+          58,
+          61,
+          65,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="2"
+      midiNotes={
+        Array [
+          65,
+          68,
+          72,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="3"
+      midiNotes={
+        Array [
+          60,
+          63,
+          67,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="4"
+      midiNotes={
+        Array [
+          67,
+          70,
+          74,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="5"
+      midiNotes={
+        Array [
+          62,
+          65,
+          69,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="6"
+      midiNotes={
+        Array [
+          69,
+          72,
+          76,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="7"
+      midiNotes={
+        Array [
+          64,
+          67,
+          71,
+        ]
+      }
+    />
+  </ButtonRowComponent>
+  <ButtonRowComponent
+    label="Seventh"
+  >
+    <Connect(ButtonComponent)
+      key="0"
+      midiNotes={
+        Array [
+          73,
+          67,
+          70,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="1"
+      midiNotes={
+        Array [
+          68,
+          62,
+          65,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="2"
+      midiNotes={
+        Array [
+          75,
+          69,
+          72,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="3"
+      midiNotes={
+        Array [
+          70,
+          64,
+          67,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="4"
+      midiNotes={
+        Array [
+          77,
+          71,
+          74,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="5"
+      midiNotes={
+        Array [
+          72,
+          66,
+          69,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="6"
+      midiNotes={
+        Array [
+          79,
+          73,
+          76,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="7"
+      midiNotes={
+        Array [
+          74,
+          68,
+          71,
+        ]
+      }
+    />
+  </ButtonRowComponent>
+  <ButtonRowComponent
+    label="Diminished"
+  >
+    <Connect(ButtonComponent)
+      key="0"
+      midiNotes={
+        Array [
+          66,
+          69,
+          72,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="1"
+      midiNotes={
+        Array [
+          61,
+          64,
+          67,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="2"
+      midiNotes={
+        Array [
+          68,
+          71,
+          74,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="3"
+      midiNotes={
+        Array [
+          63,
+          66,
+          69,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="4"
+      midiNotes={
+        Array [
+          70,
+          73,
+          76,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="5"
+      midiNotes={
+        Array [
+          65,
+          68,
+          71,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="6"
+      midiNotes={
+        Array [
+          72,
+          75,
+          78,
+        ]
+      }
+    />
+    <Connect(ButtonComponent)
+      key="7"
+      midiNotes={
+        Array [
+          67,
+          70,
+          73,
+        ]
+      }
+    />
+  </ButtonRowComponent>
+</div>
+`;

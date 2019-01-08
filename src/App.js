@@ -1,28 +1,65 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import styles from "./App.module.css";
+import store from "store";
+import { Provider } from "react-redux";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import Bass from "components/Bass";
+import Keyboard from "components/Keyboard";
+
+export default class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+			started: false,
+		};
+	}
+
+	renderApp() {
+		return (
+			<Fragment>
+				<Bass />
+				<Keyboard />
+			</Fragment>
+		);
+	}
+
+	renderPending() {
+		return (
+			<Fragment>
+				<h2>By William Haynes</h2>
+				<p className={styles.paragraph}>
+					The Stradella Bass system is a type of layout for the bass
+					section of an accordion I've made this as an interactive
+					demo utilising the web audio API + React & Redux to
+					demonstrate how the mysterious buttons on the stradella bass
+					correspond to piano keys.
+				</p>
+				<p className={styles.paragraph}>
+					When I was first getting acquainted with the accordion I was
+					infaturated with its simplicity and musicality of harmonic
+					design in how with relative ease you can provide yourself
+					with accompaniments.
+				</p>
+				<button
+					className={styles.startButton}
+					onClick={() => this.setState({ started: true })}
+				>
+					Click here to start
+				</button>
+			</Fragment>
+		);
+	}
+
+	render() {
+		return (
+			<Provider store={store}>
+				<div className={styles.appWrapper}>
+					<h1 className={styles.header}>Stradella Bass System 🎵</h1>
+					{this.state.started
+						? this.renderApp()
+						: this.renderPending()}
+				</div>
+			</Provider>
+		);
+	}
 }
-
-export default App;

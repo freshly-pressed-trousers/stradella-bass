@@ -1,0 +1,17 @@
+.wrapper {
+	padding: 0.5em 10vw;
+	background-color: #671120;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	display: flex;
+	justify-content: center;
+}
+.label {
+	color: white;
+	text-shadow: 1px 1px black;
+	text-align: right;
+	width: 20vw;
+}
+.rowContainer {
+	display: flex;
+	justify-content: center;
+}

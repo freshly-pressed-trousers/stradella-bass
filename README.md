@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Stradella Bass
 
-## Available Scripts
+This app serves to demonstrate the functionality of the Stradella Bass system widely used on accordions through the means of a React & Redux app utilising the web audio api.
 
-In the project directory, you can run:
+The Stradella Bass system is a layout for creating accompaniments with your left hand - although I'm confident this app will demonstrate its functionality it's musicality is probably best left to a real accordion!
 
-### `npm start`
+#Installing
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Make sure you have node & npm installed, this projected was created with node v9.11.2 & npm v5.6.0.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+To install run
 
-### `npm test`
+`npm i`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the application run
 
-### `npm run build`
+`npm start`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will compile and open in a browser. Make sure to use Chrome as this hasn't been tested on other browsers!
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#Implementation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app is split into three separate layers of concern
 
-### `npm run eject`
+-   UI is handled via React in `src/components`
+-   State management is handled via Redux in `src/store`
+-   Sound processing is handled via the web audio API in `src/soundEngine`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The api connecting these modules to make it all work together is:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Containserisation via react-redux in `src/containers` connecting the React UI to application state
+-   Event-driven audio processing is interfaced via custom redux middleware in `src/store/middleware/soundEngineMiddleware` - this listens for note actions and interfaces with the soundEngine
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The minimal styling is done via CSS modules `COMPONENTNAME.module.css`, which tends to be my flavour of choice for CSS componentisation as it produces tightly scoped CSS styles, albeit with the trade off of not being very DRY - but personally I prefer reusability at the component level rather than style level :)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Components, state management are done in a functional pure-function style where possible, however the soundEngine is modelled using stateful objects as a wrapper around the stateful OOP design of the web audio API. See SignalPath.js, Envelope.js and Parameters.js; I've found this models the graph-node nature of audio processing quite well.
 
-## Learn More
+#Tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Tests can be run via Jest via running `npm test` in the root.

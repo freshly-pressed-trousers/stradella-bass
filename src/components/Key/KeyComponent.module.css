@@ -1,0 +1,34 @@
+.wrapper {
+	font-size: 2rem;
+	height: 5em;
+	border: 1px solid black;
+	width: 1em;
+	box-sizing: border-box;
+	transition: background-color 0.2s, transform 0.2s;
+	cursor: pointer;
+	background-color: white;
+}
+
+.blackNote {
+	background-color: black;
+	margin-left: -0.3em;
+	margin-right: -0.3em;
+	height: 3.5em;
+	width: 0.6em;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	transform: translateZ(3px);
+}
+
+.wrapper:hover {
+	background-color: red;
+}
+
+.on,
+.on:hover {
+	background-color: green;
+	transform: translateZ(-2px);
+}
+.blackNote.on {
+	transform: translateZ(1px);
+}

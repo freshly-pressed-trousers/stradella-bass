@@ -1,0 +1,35 @@
+@keyframes bassEnter {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.wrapper > *:nth-child(1) {
+	padding-left: 1em;
+}
+.wrapper > *:nth-child(2) {
+	padding-left: 2em;
+}
+.wrapper > *:nth-child(3) {
+	padding-left: 3em;
+}
+.wrapper > *:nth-child(4) {
+	padding-left: 4em;
+}
+.wrapper > *:nth-child(5) {
+	padding-left: 5em;
+}
+.wrapper > *:nth-child(6) {
+	padding-left: 6em;
+}
+
+.wrapper {
+	background-color: red;
+	animation-name: bassEnter;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: both;
+}
