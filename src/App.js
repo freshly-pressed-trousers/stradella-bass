@@ -36,7 +36,7 @@ export default class App extends Component {
 				</p>
 				<p className={styles.paragraph}>
 					When I was first getting acquainted with the accordion I was
-					infaturated with its simplicity and musicality of harmonic
+					infatuated with its simplicity and musicality of harmonic
 					design in how with relative ease you can provide yourself
 					with accompaniments.
 				</p>
@@ -54,7 +54,12 @@ export default class App extends Component {
 		return (
 			<Provider store={store}>
 				<div className={styles.appWrapper}>
-					<h1 className={styles.header}>Stradella Bass System 🎵</h1>
+					<h1 className={styles.header}>
+						Stradella Bass System{" "}
+						<span role="img" aria-label="Musical notes">
+							🎵
+						</span>
+					</h1>
 					{this.state.started
 						? this.renderApp()
 						: this.renderPending()}

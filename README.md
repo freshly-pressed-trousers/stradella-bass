@@ -1,10 +1,12 @@
-#Stradella Bass
+# Stradella Bass
 
 This app serves to demonstrate the functionality of the Stradella Bass system widely used on accordions through the means of a React & Redux app utilising the web audio api.
 
 The Stradella Bass system is a layout for creating accompaniments with your left hand - although I'm confident this app will demonstrate its functionality it's musicality is probably best left to a real accordion!
 
-#Installing
+![Screenshot](/screenShot.png?raw=true "Stradella Bass")
+
+## Installing && Running
 
 Make sure you have node & npm installed, this projected was created with node v9.11.2 & npm v5.6.0.
 
@@ -18,7 +20,7 @@ To run the application run
 
 This will compile and open in a browser. Make sure to use Chrome as this hasn't been tested on other browsers!
 
-#Implementation
+## Implementation
 
 The app is split into three separate layers of concern
 
@@ -35,6 +37,6 @@ The minimal styling is done via CSS modules `COMPONENTNAME.module.css`, which te
 
 Components, state management are done in a functional pure-function style where possible, however the soundEngine is modelled using stateful objects as a wrapper around the stateful OOP design of the web audio API. See SignalPath.js, Envelope.js and Parameters.js; I've found this models the graph-node nature of audio processing quite well.
 
-#Tests
+## Tests
 
 Tests can be run via Jest via running `npm test` in the root.
