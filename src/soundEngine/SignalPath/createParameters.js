@@ -14,15 +14,15 @@ export default function createParameters() {
 	amplitudeEnvelope.release = 0.01;
 
 	return {
-		detune: 0.01,
+		detune: 0.05,
 		offset: 0,
 		bendAmount: 0,
 		bendRange: 2,
-		filterCutoff: 240,
+		filterCutoff: 200,
 		filterResonance: 3,
-		oscAType: "square",
+		oscAType: "sawtooth",
 		oscBType: "sawtooth",
-		oscMix: 0.5,
+		oscMix: 0.2,
 		filterType: "lowpass",
 		filterEnvelope,
 		amplitudeEnvelope,

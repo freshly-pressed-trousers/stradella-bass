@@ -185,19 +185,21 @@ describe("SignalPath", () => {
 				audioContextMock.currentTime
 			);
 		});
-		it("sets ampA gain value to 0.25 (50% mix)", () => {
-			const signalPath = new SignalPath();
+		describe("oscillator mix", () => {
+			it("sets ampA gain value to 0.4", () => {
+				const signalPath = new SignalPath();
 
-			signalPath.midiNoteOn(42);
+				signalPath.midiNoteOn(42);
 
-			expect(ampAMock.gain.value).toEqual(0.25);
-		});
-		it("sets ampB gain value to 0.25 (50% mix)", () => {
-			const signalPath = new SignalPath();
+				expect(ampAMock.gain.value).toEqual(0.4);
+			});
+			it("sets ampB gain value to 0.1", () => {
+				const signalPath = new SignalPath();
 
-			signalPath.midiNoteOn(42);
+				signalPath.midiNoteOn(42);
 
-			expect(ampBMock.gain.value).toEqual(0.25);
+				expect(ampBMock.gain.value).toEqual(0.1);
+			});
 		});
 		it("sets filter Q", () => {
 			const signalPath = new SignalPath();
@@ -225,7 +227,7 @@ describe("SignalPath", () => {
 				filterEnvelopeMock.setEnvelopeNoteOnAutomation
 			).toBeCalledWith(
 				filterMock.frequency,
-				240,
+				200,
 				audioContextMock.currentTime
 			);
 		});
@@ -260,7 +262,7 @@ describe("SignalPath", () => {
 				filterEnvelopeMock.setEnvelopeNoteOffAutomation
 			).toBeCalledWith(
 				filterMock.frequency,
-				240,
+				200,
 				audioContextMock.currentTime
 			);
 		});
